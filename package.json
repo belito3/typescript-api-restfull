@@ -1,0 +1,33 @@
+{
+  "name": "javascript-conference-2017-nodejs-typescript",
+  "description": "Reference: Manuel Rauber <manuel.rauber@thinktecture.com>",
+  "version": "1.0.0",
+  "keywords": [
+    "typeorm",
+    "webapi",
+    "api",
+    "web",
+    "web api",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "start": "nodemon --exec ts-node src/application.ts",
+    "start-server": "node build/application.js"
+  },
+  "author": "baobui",
+  "license": "ISC",
+  "dependencies": {
+    "@types/restify": "^5.0.7",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.3",
+    "pg": "^7.3.0",
+    "reflect-metadata": "^0.1.10",
+    "restify": "^6.4.0",
+    "rimraf": "^2.6.2",
+    "ts-node": "^3.3.0",
+    "typeorm": "0.1.0-alpha.42",
+    "typescript": "^2.8.1",
+    "uuid": "^3.2.1"
+  }
+}
