@@ -1,0 +1,46 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_delete`(
+IN p_UserId varchar(255))
+BEGIN
+	delete from user where UserId = p_UserId;
+END
+
+
+------------------------------
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_get`(
+IN p_UserId varchar(255)
+)
+BEGIN
+ select * from user where UserId = p_UserId limit 1;
+END
+
+
+-------------------------------
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_list`()
+BEGIN
+	select * from user;
+END
+
+
+---------------------------------
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_save`(
+IN p_UserId varchar(255),
+IN p_FullName varchar(255), 
+IN p_PhoneNumber varchar(255),
+IN p_FbUrl varchar(255)
+)
+BEGIN
+if exists (select UserId from user where UserId = p_UserId)
+then 
+	update user set FullName = COALESCE(p_FullName, FullName),
+					PhoneNumber = COALESCE(p_PhoneNumber, PhoneNumber), 
+                    FbUrl = COALESCE(p_FbUrl,FbUrl)
+				where UserId = p_UserId;
+else 
+	insert into user(UserId, FullName,  PhoneNumber, FbUrl)
+    values (p_UserId, p_FullName, p_PhoneNumber, p_FbUrl);
+    end if;
+END

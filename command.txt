@@ -1,0 +1,36 @@
+https://www.youtube.com/watch?v=XqbBv1i9Yhc
+https://medium.com/@igorandreev/how-to-start-with-backend-typescript-and-use-its-full-potential-5114e52012b
+http://mongoosejs.com/docs/guide.html
+
+
+
+//  setup command
++ npm install touch-cli -g
++ yarn init -y
++ tsc --init
++ yarn add express mongoose body-parser helmet morgan compression
++ yarn add --dev @types/node @types/express @types/mongoose typescript
+
++ touch tsconfig.json
++ mkdir src
++ mkdir "src/controllers"
++ mkdir "src/models"
++ touch src/index.ts
++ touch src/server.ts
++ touch src/models/User.ts
++ yarn add cors
++ touch src/controllers/UserController.ts
+
++ yarn ts : complie
++ yarn server : khoi tao server
+
+
+----------------------------------------------
+
++ install package: npm i typescript ts-node nodemon restify @types/restify typeorm mysql rimraf uuid
+
+
+
++ Run: npm start  
+-> t? run script trong package.json
+
