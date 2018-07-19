@@ -2,7 +2,7 @@
 drop table if exists devices_store;
 
 create table devices_store(
-	deviceId binary(16),
+	deviceId binary(16) not null,
 	storeId binary(16),
 	customerId binary(16),
 	typeVehicle int,
