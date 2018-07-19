@@ -1,3 +1,16 @@
+
+drop table if exists devices_store;
+
+create table devices_store(
+	deviceId binary(16),
+	storeId binary(16),
+	customerId binary(16),
+	typeVehicle int,
+	active int,
+primary key(deviceId));
+
+
+---------------------------------------------------------------------
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_delete`(
 IN p_UserId varchar(255))
 BEGIN
@@ -5,7 +18,7 @@ BEGIN
 END
 
 
-------------------------------
+---------------------------------------------------------------------
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_get`(
 IN p_UserId varchar(255)
@@ -15,7 +28,8 @@ BEGIN
 END
 
 
--------------------------------
+---------------------------------------------------------------------
+
 
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_list`()
@@ -24,7 +38,8 @@ BEGIN
 END
 
 
----------------------------------
+---------------------------------------------------------------------
+
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_save`(
 IN p_UserId varchar(255),
