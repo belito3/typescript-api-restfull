@@ -1,6 +1,12 @@
 
 
+drop table if exists customers;
 
+create table customers(
+	CustomerId varchar(255) not null,
+	CustomerName varchar(255),
+    StoreId varchar(255),
+	primary key(CustomerId));
 ---------------------------------------------------------------------
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_user_delete`(
 IN p_UserId varchar(255))
